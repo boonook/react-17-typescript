@@ -18,7 +18,6 @@ let Page:any = inject("appState")(observer(((props:any)=>{
                 {Object.keys(routesConfig).map(key=>
                     routesConfig[key].map((r:any)=>{
                         if(key!='menus'){
-                            console.log('123123213',key);
                             const route = (r:any) =>{
                                 const Component = r.component;
                                 return (

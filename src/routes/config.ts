@@ -1,4 +1,6 @@
-import loadable from '@/libs/loadable'
+import loadable from '@/libs/loadable';
+import {routes} from '@/pages/project/promotion/router';
+import {cheapflightRoutes} from '@/pages/project/cheapflight/router'
 const menus:any = {
     menus: [
         ////存放底部菜单导航的
@@ -12,5 +14,7 @@ const menus:any = {
         { key: '/login', title: '登录', icon: 'mobile', component: loadable(() => import('@/pages/auth/login'))},
     ],
 };
+
+menus.others = [...menus.others,...routes(),...cheapflightRoutes()]
 
 export default menus;
