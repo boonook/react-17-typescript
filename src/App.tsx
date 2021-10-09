@@ -8,7 +8,9 @@ import { Badge, TabBar } from 'antd-mobile'
 import Home from '@/pages/home/index';
 import Mine from '@/pages/mine/index';
 import './App.less';
-import history from '@/libs/history'
+import history from '@/libs/history';
+import routesConfig from '@/routes/config';
+import Routes from '@/routes/index';
 function App() {
   const [activeKey, setActiveKey] = useState('/app/home');
   const [height, setHeight] = useState<any>(50)
@@ -39,16 +41,16 @@ function App() {
       let height = document.getElementById("TabBar")?.clientHeight;
       setHeight(height);
     })
+    Object.keys(routesConfig).map((key:any)=>
+      routesConfig[key].map((r:any)=>{
+        console.log(r);
+      })
+    )
   },[activeKey])
 
   return (
-    <div className="App" id="App" style={{height:"calc(100% - "+height+"px)"}}>
-      <div>
-        <Switch>
-            <Route path="/app/home" component={Home} />
-            <Route path="/app/mine" component={Mine} />
-        </Switch>
-      </div>
+    <div className="App" id="App" style={{height:"calc(100% - "+height+"px)",paddingBottom:height+"px"}}>
+      <Routes/>  
       <div className="TabBar" id="TabBar">
         <TabBar onChange={(value)=>{onTabChange(value)}}>
           {tabs.map(item => (
