@@ -50,7 +50,7 @@ function App() {
 
   return (
     <div className="App" id="App" style={{height:"calc(100% - "+height+"px)",paddingBottom:height+"px"}}>
-      <Routes/>  
+      <Routes/> 
       <div className="TabBar" id="TabBar">
         <TabBar onChange={(value)=>{onTabChange(value)}}>
           {tabs.map(item => (

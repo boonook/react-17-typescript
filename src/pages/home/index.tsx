@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import {inject, observer} from "mobx-react";
 
-let home = inject("appState")(observer(((props:any)=>{
+let home:any = inject("appState")(observer(((props:any)=>{
     const [time,setTime] = useState(5)
     useEffect(()=>{
         

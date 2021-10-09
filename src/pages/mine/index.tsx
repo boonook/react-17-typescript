@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import {inject, observer} from "mobx-react";
+import {Button} from 'antd-mobile'
 
 let mine = inject("appState")(observer(((props:any)=>{
     const [time,setTime] = useState(5)
@@ -7,9 +8,13 @@ let mine = inject("appState")(observer(((props:any)=>{
         
     })
 
+    function onSetting(){
+        props.history.push('/setting');
+    }
+
     return (
         <div className={'home'}>
-            <h1  style={{fontSize:'14px',margin:0}} className={'noFoundTitle'}>Mine</h1>
+            <Button onClick={() => onSetting()}>前往设置界面</Button>
         </div>
     );
 })))
