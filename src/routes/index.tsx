@@ -35,7 +35,7 @@ let CRouter = inject("appState")(observer(((props:any)=>{
                                         };
                                         ///重新包装组件
                                         const wrappedComponent = (
-                                            <DocumentTitle title={r.title}>
+                                            <DocumentTitle title={r.title||'航班管家'}>
                                                 <Component {...merge} />
                                             </DocumentTitle>
                                         );

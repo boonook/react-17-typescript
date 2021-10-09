@@ -1,9 +1,10 @@
 import React,{useEffect,useState} from 'react';
-import './noFound.css';
+import './noFound.less';
 import {inject, observer} from "mobx-react";
 
 let NoFound = inject("appState")(observer(((props:any)=>{
-    const [time,setTime] = useState(5)
+    document.title = '航班管家';
+    const [time,setTime] = useState(5);
     useEffect(()=>{
         let timerID = setTimeout(()=>{
             goPage()
