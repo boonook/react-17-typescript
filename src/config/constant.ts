@@ -7,7 +7,7 @@ const constant = {
   sex: {
     man: 0,
     woman: 1,
-    getText (s) {
+    getText (s:any) {
       switch (Number(s)) {
         case this.man :
           return '男'
@@ -103,7 +103,7 @@ const constant = {
      * @param {"image"|"video"|"document"} fileType
      * @return {string}
      */
-    getFileAccept: function (fileType) {
+    getFileAccept: function (fileType:any) {
       if (!fileType) return ''
       switch (fileType) {
         case 'image':return this.imageTypes.map(i => `image/${i}`).join(',')
