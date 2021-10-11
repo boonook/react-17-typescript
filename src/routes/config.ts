@@ -1,4 +1,4 @@
-import loadable from '@/libs/loadable';
+import loadable from '@/components/loadable';
 import {routes} from '@/pages/project/promotion/router';
 import {cheapflightRoutes} from '@/pages/project/cheapflight/router'
 const menus:any = {
