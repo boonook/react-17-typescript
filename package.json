@@ -2,6 +2,8 @@
   "name": "react7ts",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
+  "main": "main.js",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
@@ -33,6 +35,9 @@
     "css-loader": "4.3.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
+    "electron": "^15.1.2",
+    "electron-is-dev": "^2.0.0",
+    "electron-packager": "^15.4.0",
     "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.2.0",
@@ -91,7 +96,10 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "dev": "concurrently \"npm run start\" \" npm run electron\"",
+    "electron": "wait-on tcp:3000 && electron .",
+    "electron-packager": "electron-packager . hbgj --platform=win32 --arch=x64"
   },
   "eslintConfig": {
     "extends": [
