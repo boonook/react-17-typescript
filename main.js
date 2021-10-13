@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require('electron');
 const isDev = require('electron-is-dev');
 const path = require('path');
 let mainWindow = null;
-const baseURL = process.env.NODE_ENV+''==='development'?'http://localhost:3000':`file://${__dirname}/build/index.html`;
+const baseURL = !app.isPackaged?'http://localhost:3000':`file://${__dirname}/build/index.html`;
 //判断命令行脚本的第二参数是否含--debug
 const debug = /--debug/.test(process.argv[2]);
 function makeSingleInstance () {
