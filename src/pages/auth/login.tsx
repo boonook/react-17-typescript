@@ -11,7 +11,7 @@ let Login = inject("appState")(observer(((props:any)=>{
     })
 
     function onLogin() {
-        history.replace('/app');
+        props.history.replace('/app')
     }
 
     function onRequest(){

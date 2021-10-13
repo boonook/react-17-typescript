@@ -1,4 +1,4 @@
-import { Router, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import {inject, observer} from "mobx-react";
 import NotFound from '@/pages/noFound/index';
 import history from '@/libs/history'
@@ -9,12 +9,12 @@ import routesConfig from '@/routes/config';
 
 let Page:any = inject("appState")(observer(((props:any)=>{
     return (
-        <Router history={history}>
+        <Router>
             <Switch>
                 {/* 判断是否登陆根据状态进行路由的重定向 */}
                 <Route exact path="/" render={() => <Redirect to="/login" push />} />
                 {/* 用于存放底部导航那菜单 */}
-                <Route path="/app" component={(props:any)=><App {...props}/>} />
+                <Route path="/app" component={App} />
                 {Object.keys(routesConfig).map(key=>
                     routesConfig[key].map((r:any)=>{
                         if(key!='menus'){

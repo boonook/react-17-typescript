@@ -7,11 +7,12 @@ import { Route, Switch } from 'react-router-dom';
 import { Badge, TabBar } from 'antd-mobile'
 import Home from '@/pages/home/index';
 import Mine from '@/pages/mine/index';
+import {inject, observer} from "mobx-react";
 import './App.less';
 import history from '@/libs/history';
 import routesConfig from '@/routes/config';
 import Routes from '@/routes/index';
-function App() {
+let App:any = inject("appState")(observer(((props:any)=>{
   const [activeKey, setActiveKey] = useState('/app/home');
   const [height, setHeight] = useState<any>(50)
   const tabs = [
@@ -30,11 +31,11 @@ function App() {
 
   function onTabChange(value:any){
     setActiveKey(value);
-    history.replace(activeKey);
+    props.history.replace(activeKey);
   }
 
   useEffect(()=>{
-    history.replace(activeKey);
+    props.history.replace(activeKey);
     let heights = document.getElementById("TabBar")?.clientHeight;
     setHeight(heights);
     window.addEventListener('resize',function(){
@@ -65,6 +66,6 @@ function App() {
       </div>
     </div>
   );
-}
+})))
 
 export default App;
