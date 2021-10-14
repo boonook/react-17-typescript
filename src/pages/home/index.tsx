@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import {inject, observer} from "mobx-react";
-
+import './index.less'
 let home:any = inject("appState")(observer(((props:any)=>{
     const [time,setTime] = useState(5)
     useEffect(()=>{

@@ -4,7 +4,7 @@ export default (loader:any) => {
     return Loadable({
         loader,
         loading() {
-            return <div>正在加载</div>
+            return <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100vh',width:'100%'}}>正在加载</div>
         },
     });
 }

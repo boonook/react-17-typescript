@@ -1,7 +1,6 @@
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import {inject, observer} from "mobx-react";
 import NotFound from '@/pages/noFound/index';
-import history from '@/libs/history'
 import App from './App';
 import DocumentTitle from 'react-document-title';
 import queryString from 'query-string';
