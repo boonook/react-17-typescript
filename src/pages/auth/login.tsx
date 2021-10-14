@@ -2,20 +2,25 @@ import React,{useEffect,useState} from 'react';
 import './login.less';
 import {inject, observer} from "mobx-react";
 import {Button} from 'antd-mobile';
-import history from '@/libs/history';
+import {isElectron,ipcRenderer} from '@/libs/envElectron'
 import {getHomeList} from './serve'
 
 let Login = inject("appState")(observer(((props:any)=>{
     useEffect(()=>{
-       
-    })
+        if (isElectron) {
+            ipcRenderer.send('login');
+        }
+    },[])
 
     function onLogin() {
-        props.history.replace('/app')
+        props.history.replace('/app');
+        if (isElectron) {
+            ipcRenderer.send('other');
+        }
     }
 
     function onRequest(){
-        getHomeList({}).then(res=>{
+        getHomeList({}).then((res:any)=>{
             debugger
         })
     }
