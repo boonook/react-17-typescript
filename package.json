@@ -124,6 +124,13 @@
         "zip"
       ]
     },
+    "mac": {
+      "category": "hbgj.electron.hbgj",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    },
     "files": [
       "build/**/*",
       "main.js",
