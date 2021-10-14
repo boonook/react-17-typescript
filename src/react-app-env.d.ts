@@ -19,6 +19,9 @@ declare module '*.bmp' {
   export default src;
 }
 
+declare module 'mobx-react';
+declare module 'query-string';
+
 declare module '*.gif' {
   const src: string;
   export default src;

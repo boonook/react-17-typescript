@@ -3,13 +3,11 @@ import {
   AppOutline,
   UserOutline,
 } from 'antd-mobile-icons';
-import { Route, Switch } from 'react-router-dom';
 import { Badge, TabBar } from 'antd-mobile'
-import Home from '@/pages/home/index';
-import Mine from '@/pages/mine/index';
 import {inject, observer} from "mobx-react";
+import {CloseOutline} from 'antd-mobile-icons';
+import {ipcRenderer} from '@/libs/EnvElectron'
 import './App.less';
-import history from '@/libs/history';
 import routesConfig from '@/routes/config';
 import Routes from '@/routes/index';
 let App:any = inject("appState")(observer(((props:any)=>{
@@ -49,9 +47,17 @@ let App:any = inject("appState")(observer(((props:any)=>{
     )
   },[activeKey])
 
+  ////关闭窗口
+  function onQuit(){
+    ipcRenderer.send('closeWindow');
+}
+
   return (
-    <div className="App" id="App" style={{height:"calc(100% - "+height+"px)",paddingBottom:height+"px"}}>
-      <Routes/> 
+    <div className="App" id="App">
+      <div style={{textAlign:'right',backgroundColor:'#eee'}}><CloseOutline onClick={()=>{onQuit()}} fontSize={24}/></div>
+      <div className="bodybox" style={{height:"calc(100% - "+(height+24)+"px)",overflow:'auto'}}>
+        <Routes/> 
+      </div>
       <div className="TabBar" id="TabBar">
         <TabBar onChange={(value)=>{onTabChange(value)}}>
           {tabs.map(item => (

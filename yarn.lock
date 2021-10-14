@@ -1169,7 +1169,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
-"@electron/get@^1.13.0", "@electron/get@^1.6.0":
+"@electron/get@^1.0.1", "@electron/get@^1.6.0":
   version "1.13.0"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@electron/get/-/get-1.13.0.tgz#95c6bcaff4f9a505ea46792424f451efea89228c"
   integrity sha1-lca8r/T5pQXqRnkkJPRR7+qJIow=
@@ -1843,14 +1843,6 @@
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@types/history/-/history-4.7.9.tgz#1cfb6d60ef3822c589f18e70f8b12f9a28ce8724"
   integrity sha1-HPttYO84IsWJ8Y5w+LEvmijOhyQ=
 
-"@types/hoist-non-react-statics@^3.3.0":
-  version "3.3.1"
-  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
-  integrity sha1-ESSq/lEYy1kZd66xzqrtEHDrA58=
-  dependencies:
-    "@types/react" "*"
-    hoist-non-react-statics "^3.3.0"
-
 "@types/html-minifier-terser@^5.0.0":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-5.1.1.tgz#3c9ee980f1a10d6021ae6632ca3e79ca2ec4fb50"
@@ -1933,10 +1925,10 @@
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@types/node/-/node-12.20.28.tgz#4b20048c6052b5f51a8d5e0d2acbf63d5a17e1e2"
   integrity sha1-SyAEjGBStfUajV4NKsv2PVoX4eI=
 
-"@types/node@^14.6.2":
-  version "14.17.21"
-  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@types/node/-/node-14.17.21.tgz#6359d8cf73481e312a43886fa50afc70ce5592c6"
-  integrity sha1-Y1nYz3NIHjEqQ4hvpQr8cM5VksY=
+"@types/node@^12.0.12":
+  version "12.20.29"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@types/node/-/node-12.20.29.tgz#f80f1e2156a376a23838d90905f68b816d486733"
+  integrity sha1-+A8eIVajdqI4ONkJBfaLgW1IZzM=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -1992,16 +1984,6 @@
     "@types/react" "*"
     "@types/webpack" "^4"
 
-"@types/react-redux@^7.1.16":
-  version "7.1.19"
-  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@types/react-redux/-/react-redux-7.1.19.tgz#477bd0a9b01bae6d6bf809418cdfa7d3c16d4c62"
-  integrity sha1-R3vQqbAbrm1r+AlBjN+n08FtTGI=
-  dependencies:
-    "@types/hoist-non-react-statics" "^3.3.0"
-    "@types/react" "*"
-    hoist-non-react-statics "^3.3.0"
-    redux "^4.0.0"
-
 "@types/react-router-dom@^5.3.1":
   version "5.3.1"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@types/react-router-dom/-/react-router-dom-5.3.1.tgz#76700ccce6529413ec723024b71f01fc77a4a980"
@@ -2039,6 +2021,11 @@
   version "0.16.2"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=
+
+"@types/semver@^7.3.5":
+  version "7.3.8"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@types/semver/-/semver-7.3.8.tgz#508a27995498d7586dcecd77c25e289bfaf90c59"
+  integrity sha1-UIonmVSY11htzs13wl4om/r5DFk=
 
 "@types/source-list-map@*":
   version "0.1.2"
@@ -2639,6 +2626,11 @@ argparse@^1.0.7:
   integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
   dependencies:
     sprintf-js "~1.0.2"
+
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha1-JG9Q88p4oyQPbJl+ipvR6sSeSzg=
 
 aria-query@^4.2.2:
   version "4.2.2"
@@ -3346,6 +3338,14 @@ buffer@^4.3.0:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
     isarray "^1.0.0"
+
+builder-util-runtime@8.7.5:
+  version "8.7.5"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/builder-util-runtime/-/builder-util-runtime-8.7.5.tgz#fbe59e274818885e0d2e358d5b7017c34ae6b0f5"
+  integrity sha1-++WeJ0gYiF4NLjWNW3AXw0rmsPU=
+  dependencies:
+    debug "^4.3.2"
+    sax "^1.2.4"
 
 builtin-modules@^3.1.0:
   version "3.2.0"
@@ -4390,6 +4390,13 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "2.1.2"
 
+debug@^4.3.2:
+  version "4.3.2"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
+  integrity sha1-8KScGKyHeeMdSgxgKd+3aHPHQos=
+  dependencies:
+    ms "2.1.2"
+
 decamelize@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
@@ -4741,6 +4748,11 @@ electron-is-dev@^2.0.0:
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/electron-is-dev/-/electron-is-dev-2.0.0.tgz#833487a069b8dad21425c67a19847d9064ab19bd"
   integrity sha1-gzSHoGm42tIUJcZ6GYR9kGSrGb0=
 
+electron-log@^4.4.1:
+  version "4.4.1"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/electron-log/-/electron-log-4.4.1.tgz#28ebeb474eccba2ebf194a96c40d6328e5353e4d"
+  integrity sha1-KOvrR07Mui6/GUqWxA1jKOU1Pk0=
+
 electron-notarize@^1.1.1:
   version "1.1.1"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/electron-notarize/-/electron-notarize-1.1.1.tgz#3ed274b36158c1beb1dbef14e7faf5927e028629"
@@ -4790,13 +4802,27 @@ electron-to-chromium@^1.3.564, electron-to-chromium@^1.3.649:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.671.tgz#8feaed6eae42d279fa4611f58c42a5a1eb81b2a0"
   integrity sha512-RTD97QkdrJKaKwRv9h/wGAaoR2lGxNXEcBXS31vjitgTPwTWAbLdS7cEsBK68eEQy7p6YyT8D5BxBEYHu2SuwQ==
 
-electron@^15.1.2:
-  version "15.1.2"
-  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/electron/-/electron-15.1.2.tgz#be1e362ab7307e38155709b0862e6a87f5e748b3"
-  integrity sha1-vh42KrcwfjgVVwmwhi5qh/XnSLM=
+electron-updater@^4.3.9:
+  version "4.3.9"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/electron-updater/-/electron-updater-4.3.9.tgz#247c660bafad7c07935e1b81acd3e9a5fd733154"
+  integrity sha1-JHxmC6+tfAeTXhuBrNPppf1zMVQ=
   dependencies:
-    "@electron/get" "^1.13.0"
-    "@types/node" "^14.6.2"
+    "@types/semver" "^7.3.5"
+    builder-util-runtime "8.7.5"
+    fs-extra "^10.0.0"
+    js-yaml "^4.1.0"
+    lazy-val "^1.0.4"
+    lodash.escaperegexp "^4.1.2"
+    lodash.isequal "^4.5.0"
+    semver "^7.3.5"
+
+electron@9.2.1:
+  version "9.2.1"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/electron/-/electron-9.2.1.tgz#54ef574e1af4ae967b5efa94312f1b6458d44a02"
+  integrity sha1-VO9XThr0rpZ7XvqUMS8bZFjUSgI=
+  dependencies:
+    "@electron/get" "^1.0.1"
+    "@types/node" "^12.0.12"
     extract-zip "^1.0.3"
 
 elliptic@^6.5.3:
@@ -5739,6 +5765,15 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
+fs-extra@^10.0.0:
+  version "10.0.0"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
+  integrity sha1-n/YbZV3eU/s0qC34S7IUzoAuF8E=
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
+
 fs-extra@^4.0.0:
   version "4.0.3"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
@@ -6174,7 +6209,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
+hoist-non-react-statics@^3.1.0:
   version "3.3.2"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
@@ -7441,6 +7476,13 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+js-yaml@^4.1.0:
+  version "4.1.0"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/js-yaml/-/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
+  integrity sha1-wftl+PUBeQHN0slRhkuhhFihBgI=
+  dependencies:
+    argparse "^2.0.1"
+
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -7652,6 +7694,11 @@ last-call-webpack-plugin@^3.0.0:
     lodash "^4.17.5"
     webpack-sources "^1.1.0"
 
+lazy-val@^1.0.4:
+  version "1.0.5"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/lazy-val/-/lazy-val-1.0.5.tgz#6cf3b9f5bc31cee7ee3e369c0832b7583dcd923d"
+  integrity sha1-bPO59bwxzufuPjacCDK3WD3Nkj0=
+
 less-loader@^4.1.0:
   version "4.1.0"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/less-loader/-/less-loader-4.1.0.tgz#2c1352c5b09a4f84101490274fd51674de41363e"
@@ -7775,6 +7822,11 @@ lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
+
+lodash.escaperegexp@^4.1.2:
+  version "4.1.2"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/lodash.escaperegexp/-/lodash.escaperegexp-4.1.2.tgz#64762c48618082518ac3df4ccf5d5886dae20347"
+  integrity sha1-ZHYsSGGAglGKw99Mz11YhtriA0c=
 
 lodash.get@^4.0.0:
   version "4.4.2"
@@ -10086,7 +10138,7 @@ react-error-overlay@^6.0.9:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
 
-react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
+react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -10102,18 +10154,6 @@ react-loadable@^5.5.0:
   integrity sha1-WCJRZ509qGwyquLI5onFnxGW2MQ=
   dependencies:
     prop-types "^15.5.0"
-
-react-redux@^7.1.0:
-  version "7.2.5"
-  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/react-redux/-/react-redux-7.2.5.tgz#213c1b05aa1187d9c940ddfc0b29450957f6a3b8"
-  integrity sha1-ITwbBaoRh9nJQN38CylFCVf2o7g=
-  dependencies:
-    "@babel/runtime" "^7.12.1"
-    "@types/react-redux" "^7.1.16"
-    hoist-non-react-statics "^3.3.2"
-    loose-envify "^1.4.0"
-    prop-types "^15.7.2"
-    react-is "^16.13.1"
 
 react-refresh@^0.8.3:
   version "0.8.3"
@@ -10267,27 +10307,6 @@ redent@^3.0.0:
   dependencies:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
-
-redux-alita@^2.3.3:
-  version "2.3.3"
-  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/redux-alita/-/redux-alita-2.3.3.tgz#a8c63e55e23584b84ba5b15038781c79c42b20b9"
-  integrity sha1-qMY+VeI1hLhLpbFQOHgcecQrILk=
-  dependencies:
-    react-redux "^7.1.0"
-    redux "^4.0.1"
-    redux-thunk "^2.3.0"
-
-redux-thunk@^2.3.0:
-  version "2.3.0"
-  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
-  integrity sha1-UcLBmhhe1Rh6qpotCLZm0NZGdiI=
-
-redux@^4.0.0, redux@^4.0.1:
-  version "4.1.1"
-  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/redux/-/redux-4.1.1.tgz#76f1c439bb42043f985fbd9bf21990e60bd67f47"
-  integrity sha1-dvHEObtCBD+YX72b8hmQ5gvWf0c=
-  dependencies:
-    "@babel/runtime" "^7.9.2"
 
 regenerate-unicode-properties@^8.2.0:
   version "8.2.0"
@@ -10737,7 +10756,7 @@ sass-loader@^10.0.5:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sax@~1.2.4:
+sax@^1.2.4, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
