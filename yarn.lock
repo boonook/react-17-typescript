@@ -1174,7 +1174,6 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
-<<<<<<< HEAD
 "@develar/schema-utils@~2.6.5":
   version "2.6.5"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@develar/schema-utils/-/schema-utils-2.6.5.tgz#3ece22c5838402419a6e0425f85742b961d9b6c6"
@@ -1183,8 +1182,6 @@
     ajv "^6.12.0"
     ajv-keywords "^3.4.1"
 
-=======
->>>>>>> 59a792a338c2f5268b720d7d0128d3d1ba906d23
 "@electron/get@^1.0.1", "@electron/get@^1.6.0":
   version "1.13.0"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/@electron/get/-/get-1.13.0.tgz#95c6bcaff4f9a505ea46792424f451efea89228c"
@@ -3498,7 +3495,6 @@ buffer@^4.3.0:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
-<<<<<<< HEAD
 buffer@^5.1.0:
   version "5.7.1"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/buffer/-/buffer-5.7.1.tgz#ba62e7c13133053582197160851a8f648e99eed0"
@@ -3507,21 +3503,22 @@ buffer@^5.1.0:
     base64-js "^1.3.1"
     ieee754 "^1.1.13"
 
-builder-util-runtime@8.8.1:
-  version "8.8.1"
-  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/builder-util-runtime/-/builder-util-runtime-8.8.1.tgz#d6e2b5f27723a7606f381e52a3000dadb1d6e4a9"
-  integrity sha1-1uK18ncjp2BvOB5SowANrbHW5Kk=
-=======
 builder-util-runtime@8.7.5:
   version "8.7.5"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/builder-util-runtime/-/builder-util-runtime-8.7.5.tgz#fbe59e274818885e0d2e358d5b7017c34ae6b0f5"
   integrity sha1-++WeJ0gYiF4NLjWNW3AXw0rmsPU=
->>>>>>> 59a792a338c2f5268b720d7d0128d3d1ba906d23
   dependencies:
     debug "^4.3.2"
     sax "^1.2.4"
 
-<<<<<<< HEAD
+builder-util-runtime@8.8.1:
+  version "8.8.1"
+  resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/builder-util-runtime/-/builder-util-runtime-8.8.1.tgz#d6e2b5f27723a7606f381e52a3000dadb1d6e4a9"
+  integrity sha1-1uK18ncjp2BvOB5SowANrbHW5Kk=
+  dependencies:
+    debug "^4.3.2"
+    sax "^1.2.4"
+
 builder-util@22.13.1:
   version "22.13.1"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/builder-util/-/builder-util-22.13.1.tgz#fb2165c725b9405f0605a765cf91ec1870995ada"
@@ -3543,8 +3540,6 @@ builder-util@22.13.1:
     stat-mode "^1.0.0"
     temp-file "^3.4.0"
 
-=======
->>>>>>> 59a792a338c2f5268b720d7d0128d3d1ba906d23
 builtin-modules@^3.1.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-3.2.0.tgz#45d5db99e7ee5e6bc4f362e008bf917ab5049887"
@@ -4642,11 +4637,7 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "2.1.2"
 
-<<<<<<< HEAD
 debug@^4.3.1, debug@^4.3.2:
-=======
-debug@^4.3.2:
->>>>>>> 59a792a338c2f5268b720d7d0128d3d1ba906d23
   version "4.3.2"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
   integrity sha1-8KScGKyHeeMdSgxgKd+3aHPHQos=
@@ -5145,8 +5136,6 @@ electron-to-chromium@^1.3.564, electron-to-chromium@^1.3.649:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.671.tgz#8feaed6eae42d279fa4611f58c42a5a1eb81b2a0"
   integrity sha512-RTD97QkdrJKaKwRv9h/wGAaoR2lGxNXEcBXS31vjitgTPwTWAbLdS7cEsBK68eEQy7p6YyT8D5BxBEYHu2SuwQ==
 
-<<<<<<< HEAD
-=======
 electron-updater@^4.3.9:
   version "4.3.9"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/electron-updater/-/electron-updater-4.3.9.tgz#247c660bafad7c07935e1b81acd3e9a5fd733154"
@@ -5161,7 +5150,6 @@ electron-updater@^4.3.9:
     lodash.isequal "^4.5.0"
     semver "^7.3.5"
 
->>>>>>> 59a792a338c2f5268b720d7d0128d3d1ba906d23
 electron@9.2.1:
   version "9.2.1"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/electron/-/electron-9.2.1.tgz#54ef574e1af4ae967b5efa94312f1b6458d44a02"
@@ -8146,7 +8134,6 @@ last-call-webpack-plugin@^3.0.0:
     lodash "^4.17.5"
     webpack-sources "^1.1.0"
 
-<<<<<<< HEAD
 latest-version@^5.1.0:
   version "5.1.0"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/latest-version/-/latest-version-5.1.0.tgz#119dfe908fe38d15dfa43ecd13fa12ec8832face"
@@ -8155,9 +8142,6 @@ latest-version@^5.1.0:
     package-json "^6.3.0"
 
 lazy-val@^1.0.4, lazy-val@^1.0.5:
-=======
-lazy-val@^1.0.4:
->>>>>>> 59a792a338c2f5268b720d7d0128d3d1ba906d23
   version "1.0.5"
   resolved "http://mvn.133ec.com:8081/nexus/content/groups/npm_all/lazy-val/-/lazy-val-1.0.5.tgz#6cf3b9f5bc31cee7ee3e369c0832b7583dcd923d"
   integrity sha1-bPO59bwxzufuPjacCDK3WD3Nkj0=

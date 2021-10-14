@@ -36,10 +36,6 @@
     "css-loader": "4.3.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
-<<<<<<< HEAD
-=======
-    "electron": "9.2.1",
->>>>>>> 59a792a338c2f5268b720d7d0128d3d1ba906d23
     "electron-is-dev": "^2.0.0",
     "electron-log": "^4.4.1",
     "electron-packager": "^15.4.0",
@@ -108,11 +104,30 @@
     "electron": "wait-on tcp:3000 && electron .",
     "build-win": "yarn build && electron-packager . hbgj --platform=win32 --arch=x64 --out='./dist' --app-version=2.0.1",
     "build-mac": "yarn build && electron-packager . hbgj --platform=darwin --arch=x64 --out='./dist' --app-version=2.0.1",
+    "dist-win": "yarn build && electron-builder --win --ia32",
+    "dist-mac": "yarn build && electron-builder --mac"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "build": {
+    "appId": "com.wss.app",
+    "directories": {
+      "output": "builder"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "files": [
+      "build/**/*",
+      "main.js",
+      "preload.js"
     ]
   },
   "browserslist": {

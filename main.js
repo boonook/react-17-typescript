@@ -1,8 +1,19 @@
 const { app, BrowserWindow,Menu } = require('electron');
 const isDev = require('electron-is-dev');
 const path = require('path');
+const url = require('url')
 let mainWindow = null;
-const baseURL = !app.isPackaged?'http://localhost:3000':`file://${__dirname}/build/index.html`;
+let baseURL = '';
+// const baseURL = !app.isPackaged?'http://localhost:3000':`file://${__dirname}/build/index.html`;
+if (!app.isPackaged) {
+    baseURL = 'http://localhost:3000';
+  } else {
+    baseURL = url.format({
+        pathname: path.join(__dirname, './build/index.html'),
+        protocol: 'file',
+        slashes: true
+    });
+  }
 //判断命令行脚本的第二参数是否含--debug
 const debug = /--debug/.test(process.argv[2]);
 function makeSingleInstance () {
@@ -33,9 +44,10 @@ function createWindow () {
     mainWindow = new BrowserWindow(windowOptions);
     Menu.setApplicationMenu(null)
     mainWindow.loadURL(baseURL);
-      if (isDev) {
-        mainWindow.webContents.openDevTools({ mode: 'detach' });
-      }  
+    //   if (isDev) {
+    //     mainWindow.webContents.openDevTools({ mode: 'detach' });
+    //   }  
+    mainWindow.webContents.openDevTools({ mode: 'detach' });
     // mainWindow.loadURL(path.join('file://', __dirname, '/build/index.html'));
     //接收渲染进程的信息
     const ipc = require('electron').ipcMain;
