@@ -114,7 +114,7 @@
     ]
   },
   "build": {
-    "appId": "com.wss.app",
+    "appId": "com.electron.hbgj",
     "directories": {
       "output": "builder"
     },
@@ -125,7 +125,7 @@
       ]
     },
     "mac": {
-      "category": "hbgj.electron.hbgj",
+      "category": "com.electron.hbgj",
       "target": [
         "zip",
         "dmg"
