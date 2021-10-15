@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import {inject, observer} from "mobx-react";
 import {Button} from 'antd-mobile'
+import './index.less'
 
 let mine = inject("appState")(observer(((props:any)=>{
     const [time,setTime] = useState(5)

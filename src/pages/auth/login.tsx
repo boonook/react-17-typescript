@@ -10,6 +10,13 @@ let Login = inject("appState")(observer(((props:any)=>{
     useEffect(()=>{
         if (isElectron) {
             ipcRenderer.send('login');
+            ////
+            ipcRenderer.on('ping', (event:any, message:any) => {
+                console.log('----------------------',message) // Prints 'whoooooooh!'，这里的message是object类型
+            });
+            ipcRenderer.on('ping2', (event:any, message:any) => {
+                console.log('++++++++++++++++++++++++++++',message) // Prints 'whoooooooh!'，这里的message是object类型
+            })
         }
     },[])
 

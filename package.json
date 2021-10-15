@@ -114,6 +114,9 @@
     ]
   },
   "build": {
+    "releaseInfo": {
+      "releaseNotes": "优化我的订单、信息库、角色功能,新增退费、退费订单审核" 
+    },
     "appId": "com.electron.hbgj",
     "directories": {
       "output": "builder"

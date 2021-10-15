@@ -54,7 +54,7 @@ let App:any = inject("appState")(observer(((props:any)=>{
 
   return (
     <div className="App" id="App">
-      <div className="bodybox" style={{height:"calc(100% - "+(height)+"px)",overflow:'auto'}}>
+      <div className="bodybox" style={{height:"calc(100% - "+(height)+"px)",overflow:'hidden'}}>
         <Routes/> 
       </div>
       <div className="TabBar" id="TabBar">

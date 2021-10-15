@@ -1,7 +1,19 @@
 const { app, BrowserWindow,Menu } = require('electron');
 const isDev = require('electron-is-dev');
 const path = require('path');
-const url = require('url')
+const url = require('url');
+
+/***********检测更新***************/
+log = require('electron-log');
+const { autoUpdater } = require('electron-updater');
+autoUpdater.logger = log;
+// 手动更新
+// autoUpdater.autoDownload = false;
+autoUpdater.logger.transports.file.level = 'info';
+log.info('App starting...');
+const feedURL = '存放electron下载的地址';
+/***********检测更新***************/
+
 let mainWindow = null;
 let baseURL = '';
 // const baseURL = !app.isPackaged?'http://localhost:3000':`file://${__dirname}/build/index.html`;
@@ -42,7 +54,7 @@ function createWindow () {
         }
     };
     mainWindow = new BrowserWindow(windowOptions);
-    Menu.setApplicationMenu(null)
+    Menu.setApplicationMenu(null);
     mainWindow.loadURL(baseURL);
     //   if (isDev) {
     //     mainWindow.webContents.openDevTools({ mode: 'detach' });
@@ -61,12 +73,15 @@ function createWindow () {
     ipc.on("login",function () {
         mainWindow.setSize(300, 400);
         mainWindow.center();
+        mainWindow.setMaximizable(false);
         mainWindow.setResizable(false);
+        mainWindow.webContents.send('ping', 'pong');
     });
      ///其他界面
     ipc.on("other",function () {
         mainWindow.setSize(800, 600);
         mainWindow.center();
+        mainWindow.setMaximizable(true);
         mainWindow.setResizable(true);
     });
     // 关闭窗口
@@ -81,9 +96,14 @@ function createWindow () {
     mainWindow.on('close',()=>{
       mainWindow = null;
     });
-  }
+    ///与渲染层进行通讯
+    mainWindow.webContents.on("did-finish-load",()=>{
+        // console.log("did-finish-load");
+        mainWindow.webContents.send('ping2', 'pong1111111111111111111');
+    })
+}
 
-  makeSingleInstance();
+makeSingleInstance();
 //app主进程的事件和方法
 app.on('ready', () => {
     createWindow();
@@ -98,4 +118,44 @@ app.on('activate', () => {
         createWindow();
     }
 });
+
+const checkForUpdates = () => {
+    autoUpdater.setFeedURL(feedURL);
+  
+    autoUpdater.on('error', function (err) {
+      sendStatusToWindow({ text: '检查更新出错' + err });
+    });
+
+    autoUpdater.on('checking-for-update', function () {
+      sendStatusToWindow('正在检查更新……');
+    });
+
+    autoUpdater.on('update-available', function (info) {
+      sendStatusToWindow({ online: info.version });
+    });
+
+    autoUpdater.on('update-not-available', function () {
+      sendStatusToWindow({ text: '现在使用的就是最新版本，不用更新' });
+    });
+
+    // 监听下载进度事件
+    autoUpdater.on('download-progress', function (progressObj) {
+      win.webContents.send('downloadProgress', progressObj);
+    });
+
+    autoUpdater.on('update-downloaded', function () {
+      sendStatusToWindow({ text: '下载完成，开始自动安装' });
+      autoUpdater.quitAndInstall();
+    });
+  
+    ipcMain.on('checkForUpdate', () => {
+      if (process.env.NODE_ENV !== 'development') {
+        // 执行自动检查更新
+        autoUpdater.checkForUpdates();
+      }
+    });
+
+    autoUpdater.checkForUpdatesAndNotify();
+};
+
 module.exports = mainWindow;
