@@ -28,8 +28,8 @@ function makeSingleInstance () {
 }
 function createWindow () {
     const windowOptions = {
-        width: 1060,
-        height: 800,
+        width: 300,
+        height: 400,
         transparent: true,
         //frame:false,
         // 显示关闭窗口，放大窗口，缩放功能
@@ -57,16 +57,23 @@ function createWindow () {
     ipc.on('max', function () {
         mainWindow.maximize();
     });
+    ///登录界面
     ipc.on("login",function () {
         mainWindow.setSize(300, 400);
         mainWindow.center();
         mainWindow.setResizable(false);
     });
+     ///其他界面
     ipc.on("other",function () {
         mainWindow.setSize(800, 600);
         mainWindow.center();
         mainWindow.setResizable(true);
     });
+    // 关闭窗口
+    ipc.on('closeWindow', () => {
+        mainWindow.close();
+    });
+
     if(debug){
       mainWindow.webContents.openDevTools();
       require('devtron').install;
